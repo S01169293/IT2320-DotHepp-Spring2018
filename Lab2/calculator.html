@@ -1,0 +1,49 @@
+<html>
+    <!--
+    Dot Hepp 
+    IT2320 
+    Create a calculator which accepts input of x and y and performs calculations
+    on 3 formulas.
+    -->
+    <head>
+      <script>
+          function calculate() {
+              var x = document.getElementById('x').value;
+              var y = document.getElementById('y').value;
+
+              output1 = Math.pow(y, 2) * (3 - x);
+              output2 = x % 2;
+              output3 = y / x;
+    
+              document.getElementById('outputFormula1').innerHTML = output1;
+              document.getElementById('outputFormula2').innerHTML = output2;
+              document.getElementById('outputFormula3').innerHTML = output3;
+            }
+      </script>  
+    </head>
+    <body>
+        x = <input type="text" id="x"><br>
+        y = <input type="text" id="y"><br><br>
+
+        <input type="button" value="Calculate" onclick="calculate()">
+
+        <br><br>
+        Formula 1: (y2) * (3 - x) = <br>
+        Formula 2: x % 2 = <br>
+        Formual 3: y / x = <span id="output3"></span>
+
+
+       <script>
+          document.getElementById("output1").innerHTML = output1;
+          document.getElementById("output2").innerHTML = output2;
+          document.getElementById("output3").innerHTML = output3;
+       </script>
+
+      <p>
+       <h1>Calculation Output</h1>
+           Formula 1: <span id="outputFormula1"></span><br>
+           Formula 2: <span id="outputFormula2"></span><br>
+           Formula 3: <span id="outputFormula3"></span><br>
+      </p>
+    </body>
+</html>

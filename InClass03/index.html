@@ -1,0 +1,33 @@
+
+<html>
+<head>
+    </head>
+    <title> Simple Data Entry Form</title>
+    <script>
+        function submitform() {
+            alert('çalled submitform') {
+                var first = document.getElementById('firstName').value;
+                var last = document.getElementById('lastName').value;
+                var oneword = document.getElementById('oneWord').value;
+                var major = document.getElementById('major').value;
+        }
+    </script>
+    <body>
+        <form id="entryForm">
+            First Name<br>
+            <input type= "text" id="firstName" value=""><br><br>
+            Last Name<br>
+            <input type= "text" id="LastName" value=""><br><br>
+            One word description<br>
+            <input type= "text" id="oneword" value=""><br><br>
+            Major<br>
+            <select id="major">
+                <option value="Programming">Programming</option>
+                <option value="Networking">Networking</option>
+                <option value="Mathematic">Mathematics</option>
+             </select><br><br>
+             <input type="button" value="Submit" onclick="submitform">
+
+        </form>      
+    </body>
+</html>

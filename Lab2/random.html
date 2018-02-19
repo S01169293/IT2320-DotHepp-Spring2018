@@ -1,0 +1,35 @@
+<html>
+    <!--
+    Dot Hepp 
+    IT2320 
+    Populate an array with 100 random values and then output the values to the html document.  Do not
+    use alerts!  You must populate the values into an array and then display the values on the page
+    itself.  This will require 2 loops.
+    -->
+
+    <body>     
+
+    <h2>Random Number Generator</h2>
+            
+    <p id="demo3"></p>
+           
+    <script>
+        var text;
+        var i;
+        var num = [];
+
+        for (i=0; i < 100; i++){
+            num[i] = Math.random();
+        }
+        
+        text = "<ul>";
+        for (i=0; i < 100; i++){
+            text += "<li>" + num[i] + "</li>";
+        }
+        text += "</ul>";
+        document.getElementById("demo3").innerHTML = text;
+    </script>
+    
+    </body>
+        
+</html>
