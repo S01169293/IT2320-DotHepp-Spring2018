@@ -1,8 +1,15 @@
 <!DOCTYPE html>
+<!--
+Dot Hepp
+IT2320 Spring 2018 Blended
+Lab 5
+Traverse an HTML document, retrieve elements, and make changes to elements.
+-->
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
+
 // 1. use eq to retrieve the paragraph with index 1. Highlight it by setting the CSS background-color to 
 // yellow.
 
@@ -11,33 +18,28 @@ $(document).ready(function(){
 
     // 3. retrieve the first paragraph element and use the parent() method to modify the appearance of the 
     // h1 element.
-    $("p:first").css("color", "green");
-    // anytime I touch h1, the entire document takes the style change. 
-    // $("p:first").parent().css("color", "green");
-    // works - $("h1").css("background-color", "yellow");
-    $("h1").css("background-color", "yellow");
-    //$("p").parent().css("background-color", "yellow");
-    //$("p").first().css("color", "green");
+    $("p:first").parent().children("h1").css("color", "red");
+
+    // This next line also works, but above is traversing parent as requested.  
+    // $("h1").css("color", "red");
 
 
 // 2. if the user clicks the submit button and the value of favoriteFood is empty, display an error 
-// message s`tating "You must enter a favorite food" in the span following favoriteFood using the next() 
+// message stating "You must enter a favorite food" in the span following favoriteFood using the next() 
 // method.
-// this works - $("#favoriteForm").text("BLAH");
 
-// $("#favoriteForm").find("span").text("BLAH");
+$("#favoriteForm").submit(function() {
+  if($("#favoriteFood").val()=="")
+  {
+  $("#favoriteFood").next().text("Ooops.. You must enter a favorite food.");
+  return false;
+  }
+  else {
+  $("#favoriteFood").next().text("");
+  return true;
+  }
 
-//$("#favoriteForm#favoriteFood").text("BLAH");
-
-//$("#favoriteForm#favoriteFood").click(function(){
-  //if $(#favoriteForm#favoriteFood).val() = " " {
-$("#favoriteForm").find("span").text("You must enter a favorite food.");
-// $("#favoriteForm").next().text("You must enter a favorite food.");
-//}
-
-//     $("span").val("You must enter a favorite food.");
-    //$(#favorite).next().text("You must enter a favorite food.");
-//});
+});
 
 });
 </script>
