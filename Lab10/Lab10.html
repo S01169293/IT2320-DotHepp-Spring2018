@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<!--
+Dot Hepp
+IT2320 Spring 2018 Blended
+Lab 10
+Display membership levels and members using objects and arrays.
+-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>First Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        var memberships = [
+            {
+            "level": "1",
+            "type": "seasonal",
+            "members": ["Sue", "Tracie"]
+            },
+            {
+            "level": "2",
+            "type": "individual",
+            "members": ["Jen", "Michelle"]
+             },
+             {
+            "level": "3",
+            "type": "family",
+            "members": ["Joe", "Katie"]
+             },
+             {
+            "level": "4",
+            "type": "contributing",
+            "members": ["Bill", "Kim"]
+            }];
+
+        $(document).ready(function () {
+                var output = "";
+                for (i = 0; i < memberships.length; i++)
+                {
+                    output += "* Level " + memberships[i].level + " is type " + memberships[i].type + ".<br>";
+                }
+                $("#membershipLevels").html(output);
+
+                var output2 = "";
+                for (i = 0; i < memberships.length; i++)
+                {
+                    output2 += "* Type " + memberships[i].type + " members are " + memberships[i].members + ".<br>";
+                }
+                $("#members").html(output2);
+
+        });
+    </script>
+</head>
+<body>
+    <h1>Membership Levels</h1>
+    <span id="membershipLevels"></span>
+    <h1>Current Members</h1>
+    <span id="members"></span>
+</body>
+</html>

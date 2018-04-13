@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<questions>
+  <question id="question1">
+    <questiontext>Describe the purpose of AJAX.  What advantage doe AJAX provide over a traditional HTML for submit?</questiontext>
+    <answer id="answer1"></answer>
+    <answertext>The purpose of AJAX is to exchange data with a server and update a web page without reloading the
+                the whole page.  The advantage of AJAX over traditional HTML submit is that it seems more realtime in that you
+                can validate a form as the user moves along and see errors quickly as opposed to waiting for the whole
+                page to submit.  Also, things like search results can be added dynamically to a page instead of submitting
+                and refreshing a whole page when it's not necessary.</answertext>
+  </question>
+  <question id="question2">
+    <questiontext>Describe the role of JSON and XML with AJAX.</questiontext>
+    <answer id="answer2"></answer>
+    <answertext>The role of both JSON and XML with AJAX is to retrieve data from a web server and provide that
+                data to a web page.  Both are self desribing, human readable, can be parsed and used by programming
+                languages.  JSON however, seems to be faster and easier to use than XML.  
+                Using XML is generally a 3 step process: 1. Fetch an XML document. 2. Use the XML DOM to loop thru the document. 
+                3. Extract values and store into variables.  Using JSON is generally a 2 step process: 1. Fetch a JSON string.
+                2. Parse the JSON string.</answertext>
+  </question>
+  <question id="question3">
+    <questiontext>If you had to choose just one, which would you choose: XML or JSON? Why?</questiontext>
+    <answer id="answer3"></answer>
+    <answertext>I would definitely choose JSON over XML because JSON can easily become a Javascript object allowing
+                access to data more readily.  JSON is shorter and has no end tag.  JSON can also use arrays and be
+                parsed by standard Javascript functions.  XML has to be parsed with an XML parser which is more
+                difficult.  I read one opinion, however, that said each format has its place.  For example, JSON is strictly a 
+                better data exchange format and has no display capabilities.  Whereas XML is a better document exchange format 
+                which can store some display capabilities.  So if you need a full document, like a medical record, with formatting
+                included, XML just might be the better solution.</answertext>
+  </question>
+</questions>
